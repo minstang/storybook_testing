@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/html';
-import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { decorate } from '@storybook/addon-actions';
 import '../components/button/_button.scss';
 import { document, console } from 'global';
