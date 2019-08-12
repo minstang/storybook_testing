@@ -1,0 +1,7 @@
+{
+  "authToken": "Bk79bQsXr",
+  "dsmHost": "crawfordandcompany.invisionapp.com",
+  "organization": "crawford-and-company",
+  "outputDir": ".dsm",
+  "storyPath": "src/stories/**/*.{js,ts}"
+}
