@@ -1,16 +1,23 @@
 @import '../variables';
 
-.cds-btn {
+.cds-btn__content {
+  font-family: $font-family;
+  letter-spacing: 0.16px;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: medium;
+  vertical-align: middle;
+}
 
+.cds-btn {
   border: 1px solid transparent;
   vertical-align: middle;
   position: relative;
   display: inline-flex;
-  padding: 0 16px 0 16px;
+  padding: 0 16px;
   cursor: pointer;
   border-radius: 4px;
   white-space: nowrap;
-  
 
   svg {
     height: 25px;
@@ -19,33 +26,23 @@
     fill: $color-white;
   }
 
-  .cds-btn__content {
-    font-family: $font-family;
-    letter-spacing: .16px;
-    line-height: 1.125rem;
-    font-size: .875rem;
-    font-weight: medium;
-    vertical-align: middle;
-
-  }
-
   &.cds-btn--with-icon {
     padding: 10px 13px;
   }
 
   &:active {
     //border: 1px solid rgba(72, 107, 255, 0.2);
-
     &:not(:disabled) {
-
       &.cds-btn--with-icon {
         padding: 9px 12px;
       }
     }
   }
-  &:focus{
-    outline: none; 
+
+  &:focus {
+    outline: none;
   }
+
   &:hover {
     background-color: $color-primary-lighter;
 
@@ -67,51 +64,52 @@
   }
 }
 
-.cds-btn--primary--lg{
-  height:48px;
-  background-color:$color-primary;
+
+
+.cds-btn--primary--lg {
+  height: 48px;
+  background-color: $color-primary;
   color: $color-white;
 }
 
 
 // Clicking Animation
-
 .cds-btn::after {
   content: "";
   position: absolute;
-  display: block; /*pseudo elements are inline by default*/
+  display: block;
+  /*pseudo elements are inline by default*/
   z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin:-8px;
-   
-    border-radius: 7px;
-    -webkit-box-shadow: 0 0 0 0 #1890ff;
-    box-shadow: 0 0 0 0 #1890ff;
-    -webkit-box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
-    box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
-    opacity: 0;
-    -webkit-animation: fadeEffect 2s cubic-bezier(.08,  .82,  .17,  1), waveEffect .4s cubic-bezier(.08,  .82,  .17,  1);
-    animation: fadeEffect 2s cubic-bezier(.08,  .82,  .17,  1), waveEffect .4s cubic-bezier(.08,  .82,  .17,  1);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    content: '';
-    pointer-events: none;
-    background:#C9E299;
-  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -8px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 0 0 #1890ff;
+  box-shadow: 0 0 0 0 #1890ff;
+  -webkit-box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
+  box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
+  opacity: 0;
+  -webkit-animation: fadeEffect 2s cubic-bezier(.08, .82, .17, 1), waveEffect 0.4s cubic-bezier(.08, .82, .17, 1);
+  animation: fadeEffect 2s cubic-bezier(.08, .82, .17, 1), waveEffect 0.4s cubic-bezier(.08, .82, .17, 1);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  content: '';
+  pointer-events: none;
+  background: #C9E299;
 }
-
 @keyframes ripple {
   0% {
     transform: scale(0, 0);
     opacity: 1;
   }
+
   20% {
     transform: scale(0.97, 0.95);
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: scale(0.95, 0.92);
@@ -122,9 +120,11 @@
   animation: ripple 1s ease-out;
 }
 
-.cds-btn, .cds-btn:active, .cds-btn:focus {
-    outline: 0;
-    outline-color: initial;
-    outline-style: initial;
-    outline-width: 0px;
+.cds-btn,
+.cds-btn:active,
+.cds-btn:focus {
+  outline: 0;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0;
 }

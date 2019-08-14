@@ -7,7 +7,7 @@ import { document, console } from 'global';
   storiesOf('Button', module)
     .add(
       'Default button',
-      () => '<button class="cds-btn cds-btn--primary--lg">Primary button</button>', {
+      () => '<button class="cds-btn cds-btn__content cds-btn--primary--lg">Primary button</button>', {
         'in-dsm': {
           id: '5d4d103e84c33a7873cf3606',
           docFilePath: '../components/button/button.docs.json'
