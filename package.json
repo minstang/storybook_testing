@@ -17,7 +17,7 @@
     "@invisionapp/dsm-storybook": "0.0.93",
     "@storybook/addon-options": "^5.1.10",
     "@storybook/addons": "^5.1.10",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
